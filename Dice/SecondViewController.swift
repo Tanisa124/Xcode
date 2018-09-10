@@ -22,7 +22,10 @@ class SecondViewController: UIViewController,UITextFieldDelegate {
     
 
 
-
+    @IBAction func pageOne(_ sender: Any) {
+        performSegue(withIdentifier: "link2", sender: self)
+    }
+    
 
     // do some button to reset data
 

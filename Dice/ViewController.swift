@@ -11,17 +11,21 @@ import UIKit
 class ViewController: UIViewController {
     
     // it is array type
-    let diceArrayNumber: [String] = ["dice1","dice2","dice3","dice4","dice5","dice6"]
+    let diceArrayNumber: [String] = ["cherprang","pun","noey","orn","music","kaimook"]
     
     // Link Roll button, textShow, diceImage, and anything you need
-
-    
+    @IBOutlet weak var congrat: UILabel!
+    @IBOutlet weak var mem1: UIImageView!
     
     
     
     // Link Roll button function IBAction
- 
-    
+    @IBAction func role(_ sender: Any) {
+        let x : String = diceArrayNumber.getRandomElement()!
+        mem1.image = UIImage(named: x)
+        congrat.text = x
+        
+    }
     
     
     // do this afte you've done dice Random
@@ -34,7 +38,12 @@ class ViewController: UIViewController {
     // performSegue >> show the second view
     // let set segue identifier to be the name you set
     
+  
     
+    
+    @IBAction func nextPage(_ sender: Any) {
+        performSegue(withIdentifier: "link", sender: self)
+    }
     
     
     
